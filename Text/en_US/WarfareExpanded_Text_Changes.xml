@@ -94,6 +94,9 @@
 		</Replace>
 		
 		<!-- DB's Naval Units Balance -->
+		<Replace Tag="LOC_UNIT_GALLEY_DESCRIPTION">
+			<Text>Ancient era Naval Melee unit. Can only operate on coastal waters until Cartography is researched.{LOC_NAVAL_MELEE_DESCRIPTION}</Text>
+		</Replace>
 		<Replace Tag="LOC_UNIT_CARAVEL_DESCRIPTION">
 			<Text>Fast Renaissance era exploration Naval Melee unit.{LOC_NAVAL_MELEE_DESCRIPTION}</Text>
 		</Replace>
@@ -125,7 +128,9 @@
 		<Replace Tag="LOC_UNIT_NUCLEAR_SUBMARINE_DESCRIPTION">
 			<Text>Highly advanced Information era Naval Raider unit that can be armed with nuclear weapons.{LOC_NAVAL_RAIDER_DESCRIPTION}</Text>
 		</Replace>
-
+		<Replace Tag="LOC_UNIT_QUADRIREME_DESCRIPTION">
+			<Text>Classical era Naval Ranged unit. Can only operate on coastal waters until Cartography is researched.{LOC_NAVAL_RANGED_DESCRIPTION}</Text>
+		</Replace>
  		<Replace Tag="LOC_UNIT_FRIGATE_DESCRIPTION">
 			<Text>Renaissance era Naval Ranged unit.{LOC_NAVAL_RANGED_DESCRIPTION}</Text>
 		</Replace>

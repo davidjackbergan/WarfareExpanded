@@ -70,7 +70,6 @@ UPDATE UnitUpgrades SET UpgradeUnit = 'UNIT_COG'		WHERE Unit = 'UNIT_PHOENICIA_B
 
 
 -- Units Changes
--- Land Units
 UPDATE Units SET Combat = 39									WHERE UnitType = 'UNIT_ROMAN_LEGION';
 UPDATE Units SET Combat = 48									WHERE UnitType = 'UNIT_JAPANESE_SAMURAI';
 UPDATE Units SET BaseMoves = 5, Combat = 90, PromotionClass = 'PROMOTION_CLASS_LIGHT_CAVALRY'	WHERE UnitType = 'UNIT_MECHANIZED_INFANTRY';
@@ -245,8 +244,26 @@ UPDATE Units SET BaseMoves = 4, Cost = 600, Combat = 82, Bombard = 92, RangedCom
 
 
 -- 2019-08-05 DB's Naval unit balancing
-UPDATE Units SET BaseMoves = BaseMoves + 1, Combat = Combat + 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_MELEE' ;
-UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_RAIDER' ;
-UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_RANGED' ;
-UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_BOMBARD' ;
-UPDATE Units SET Range = Range - 1 WHERE UnitType = 'UNIT_GALLEON' OR UnitType = 'UNIT_SHIP_OF_THE_LINE';
+
+-- Naval Melee units
+UPDATE Units SET Combat = 45, BaseMoves = 5 WHERE UnitType = 'UNIT_CARAVEL' ;
+UPDATE Units SET Combat = 60, BaseMoves = 6 WHERE UnitType = 'UNIT_KOREAN_TURTLE_SHIP' ;
+UPDATE Units SET Combat = 65, BaseMoves = 6 WHERE UnitType = 'UNIT_IRONCLAD' ;
+UPDATE Units SET Combat = 85, BaseMoves = 6 WHERE UnitType = 'UNIT_DESTROYER' ;
+UPDATE Units SET Combat = 85, BaseMoves = 6 WHERE UnitType = 'UNIT_CANADA_HMCS_HAIDA' ;
+
+-- Naval Ranged units
+UPDATE Units SET Combat = 40 WHERE UnitType = 'UNIT_FRIGATE' ;
+UPDATE Units SET Combat = 40 WHERE UnitType = 'UNIT_INDONESIAN_JONG' ;
+UPDATE Units SET Combat = 45 WHERE UnitType = 'UNIT_DE_ZEVEN_PROVINCIEN' ;
+UPDATE Units SET Combat = 65 WHERE UnitType = 'UNIT_MISSILE_CRUISER' ;
+
+-- Naval Raider units
+UPDATE Units SET Combat = 35 WHERE UnitType = 'UNIT_OTTOMAN_BARBARY_CORSAIR' ;
+UPDATE Units SET Combat = 35 WHERE UnitType = 'UNIT_PRIVATEER' ;
+UPDATE Units SET Combat = 60 WHERE UnitType = 'UNIT_GERMAN_UBOAT' ;
+UPDATE Units SET Combat = 60 WHERE UnitType = 'UNIT_SUBMARINE' ;
+UPDATE Units SET Combat = 75 WHERE UnitType = 'UNIT_NUCLEAR_SUBMARINE' ;
+
+-- Naval Bombard units
+UPDATE Units SET Combat = 75 WHERE UnitType = 'UNIT_BATTLESHIP' ;

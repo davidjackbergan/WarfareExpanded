@@ -229,15 +229,12 @@ UPDATE UnitReplaces SET ReplacesUnitType = 'UNIT_MODERN_INFANTRY' 				WHERE CivU
 UPDATE UnitReplaces SET ReplacesUnitType = 'UNIT_PELTAST' 					WHERE CivUniqueUnitType = 'UNIT_ZULU_ASSEGAI' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_ZULU_ASSEGAI');
 UPDATE UnitReplaces SET ReplacesUnitType = 'UNIT_SHIP_OF_THE_LINE' 				WHERE CivUniqueUnitType = 'UNIT_ENGLISH_SHIP_OF_THE_LINE' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_ENGLISH_SHIP_OF_THE_LINE');
 
--- Unit PromotionClass
-UPDATE Units SET PromotionClass = 'PROMOTION_CLASS_NAVAL_BOMBARD' 				WHERE UnitType = 'UNIT_ENGLISH_SHIP_OF_THE_LINE' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_ENGLISH_SHIP_OF_THE_LINE') ;
-
 -- Units Changes
 UPDATE Units SET PromotionClass = 'PROMOTION_CLASS_MARINE' 					WHERE UnitType = 'UNIT_FRENCH_MARINE' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_FRENCH_MARINE');
 UPDATE Units SET Combat = 28, RangedCombat = 33, Range = 1 					WHERE UnitType = 'UNIT_GREEK_PELTAST' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_GREEK_PELTAST');
 UPDATE Units SET Combat = 75, RangedCombat = 85, Range = 1, PrereqTech = 'TECH_STEALTH_TECHNOLOGY', PromotionClass = 'PROMOTION_CLASS_ANTI_CAVALRY' 
 												WHERE UnitType = 'UNIT_AMERICAN_AH64_APACHE' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_AMERICAN_AH64_APACHE');
-UPDATE Units SET Bombard = 60, RangedCombat = 0, PrereqTech = 'TECH_ASTRONOMY', PromotionClass = 'PROMOTION_CLASS_NAVAL_RANGED' 
+UPDATE Units SET Bombard = 60, RangedCombat = 0, PrereqTech = 'TECH_ASTRONOMY', PromotionClass = 'PROMOTION_CLASS_NAVAL_BOMBARD' 
 												WHERE UnitType = 'UNIT_ENGLISH_SHIP_OF_THE_LINE' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_ENGLISH_SHIP_OF_THE_LINE');
 UPDATE Units SET BaseMoves = 4, Cost = 600, Combat = 82, Bombard = 92, RangedCombat = 0, Maintenance = 7, PromotionClass = 'PROMOTION_CLASS_NAVAL_BOMBARD', PrereqTech = 'TECH_SYNTHETIC_MATERIALS', StrategicResource = null 
 												WHERE UnitType = 'UNIT_JAPANESE_YAMATO' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_JAPANESE_YAMATO');
@@ -258,7 +255,7 @@ UPDATE Units SET Combat = 20, RangedCombat = 35, BaseMoves = 3 WHERE UnitType = 
 UPDATE Units SET Combat = 40, RangedCombat = 60, BaseMoves = 4 WHERE UnitType = 'UNIT_FRIGATE' ;
 UPDATE Units SET Combat = 40, RangedCombat = 60, BaseMoves = 5 WHERE UnitType = 'UNIT_INDONESIAN_JONG' ;
 UPDATE Units SET Combat = 45, RangedCombat = 65, BaseMoves = 4 WHERE UnitType = 'UNIT_DE_ZEVEN_PROVINCIEN' ;
-UPDATE Units SET Combat = 65, RangedCombat = 85, BaseMoves = 5 WHERE UnitType = 'UNIT_MISSILE_CRUISER' ;
+UPDATE Units SET Combat = 65, RangedCombat = 100, BaseMoves = 5 WHERE UnitType = 'UNIT_MISSILE_CRUISER' ;
 
 -- Naval Raider units
 UPDATE Units SET Combat = 35, BaseMoves = 4 WHERE UnitType = 'UNIT_OTTOMAN_BARBARY_CORSAIR' ;
@@ -268,5 +265,6 @@ UPDATE Units SET Combat = 60, BaseMoves = 5 WHERE UnitType = 'UNIT_SUBMARINE' ;
 UPDATE Units SET Combat = 75, BaseMoves = 4 WHERE UnitType = 'UNIT_NUCLEAR_SUBMARINE' ;
 
 -- Naval Bombard units
-UPDATE Units SET Combat = 65, BaseMoves = 4 WHERE UnitType = 'UNIT_BRAZILIAN_MINAS_GERAES' ;
-UPDATE Units SET Combat = 75, BaseMoves = 4 WHERE UnitType = 'UNIT_BATTLESHIP' ;
+UPDATE Units SET Combat = 40, Bombard = 60, BaseMoves = 4 WHERE UnitType = 'UNIT_ENGLISH_SHIP_OF_THE_LINE' ;
+UPDATE Units SET Combat = 65, Bombard = 82, BaseMoves = 4 WHERE UnitType = 'UNIT_BRAZILIAN_MINAS_GERAES' ;
+UPDATE Units SET Combat = 75, Bombard = 90, BaseMoves = 4 WHERE UnitType = 'UNIT_BATTLESHIP' ;

@@ -481,7 +481,7 @@
 			<Text>Greek Fire Dromon</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_GREEK_FIRE_SHIP_DESCRIPTION">
-			<Text>Clasical era naval bombard unit.</Text>
+			<Text>Clasical era Naval Bombard unit.{LOC_NAVAL_BOMBARD_DESCRIPTION}</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_TORPEDO_GUNBOAT_NAME">
 			<Text>Torpedo Gunboat</Text>
@@ -554,7 +554,7 @@
 			<Text>Cog</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_COG_DESCRIPTION">
-			<Text>Medieval Era Naval Melee unit.</Text>
+			<Text>Medieval Era Naval Melee unit.{LOC_NAVAL_MELEE_DESCRIPTION}</Text>
 		</Row>
 		<!-- Created by Laurana Kanan for LKs Units (18.02.10) -->
 		<!-- New promotion class for Steel & Thunder Automatic Guns -->

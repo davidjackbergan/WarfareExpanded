@@ -246,25 +246,26 @@ UPDATE Units SET BaseMoves = 4, Cost = 600, Combat = 82, Bombard = 92, RangedCom
 -- 2019-08-05 DB's Naval unit balancing
 
 -- Naval Melee units
-UPDATE Units SET Combat = 45, BaseMoves = 5 WHERE UnitType = 'UNIT_CARAVEL' ;
+UPDATE Units SET Combat = 45, BaseMoves = 4 WHERE UnitType = 'UNIT_CARAVEL' ;
 UPDATE Units SET Combat = 60, BaseMoves = 6 WHERE UnitType = 'UNIT_KOREAN_TURTLE_SHIP' ;
 UPDATE Units SET Combat = 65, BaseMoves = 6 WHERE UnitType = 'UNIT_IRONCLAD' ;
 UPDATE Units SET Combat = 85, BaseMoves = 6 WHERE UnitType = 'UNIT_DESTROYER' ;
 UPDATE Units SET Combat = 85, BaseMoves = 6 WHERE UnitType = 'UNIT_CANADA_HMCS_HAIDA' ;
 
 -- Naval Ranged units
-UPDATE Units SET Combat = 40 WHERE UnitType = 'UNIT_FRIGATE' ;
-UPDATE Units SET Combat = 40 WHERE UnitType = 'UNIT_INDONESIAN_JONG' ;
-UPDATE Units SET Combat = 45 WHERE UnitType = 'UNIT_DE_ZEVEN_PROVINCIEN' ;
-UPDATE Units SET Combat = 65 WHERE UnitType = 'UNIT_MISSILE_CRUISER' ;
+UPDATE Units SET RangedCombat = 35, BaseMoves = 3 WHERE UnitType = 'UNIT_QUADRIREME' ;
+UPDATE Units SET Combat = 40, RangedCombat = 60, BaseMoves = 4 WHERE UnitType = 'UNIT_FRIGATE' ;
+UPDATE Units SET Combat = 40, BaseMoves = 5 WHERE UnitType = 'UNIT_INDONESIAN_JONG' ;
+UPDATE Units SET Combat = 45, BaseMoves = 4 WHERE UnitType = 'UNIT_DE_ZEVEN_PROVINCIEN' ;
+UPDATE Units SET Combat = 65, BaseMoves = 5 WHERE UnitType = 'UNIT_MISSILE_CRUISER' ;
 
 -- Naval Raider units
-UPDATE Units SET Combat = 35 WHERE UnitType = 'UNIT_OTTOMAN_BARBARY_CORSAIR' ;
-UPDATE Units SET Combat = 35 WHERE UnitType = 'UNIT_PRIVATEER' ;
-UPDATE Units SET Combat = 60 WHERE UnitType = 'UNIT_GERMAN_UBOAT' ;
-UPDATE Units SET Combat = 60 WHERE UnitType = 'UNIT_SUBMARINE' ;
-UPDATE Units SET Combat = 75 WHERE UnitType = 'UNIT_NUCLEAR_SUBMARINE' ;
+UPDATE Units SET Combat = 35, BaseMoves = 4 WHERE UnitType = 'UNIT_OTTOMAN_BARBARY_CORSAIR' ;
+UPDATE Units SET Combat = 35, BaseMoves = 4 WHERE UnitType = 'UNIT_PRIVATEER' ;
+UPDATE Units SET Combat = 60, BaseMoves = 5 WHERE UnitType = 'UNIT_GERMAN_UBOAT' ;
+UPDATE Units SET Combat = 60, BaseMoves = 5 WHERE UnitType = 'UNIT_SUBMARINE' ;
+UPDATE Units SET Combat = 75, BaseMoves = 4 WHERE UnitType = 'UNIT_NUCLEAR_SUBMARINE' ;
 
 -- Naval Bombard units
-UPDATE Units SET Combat = 65 WHERE UnitType = 'UNIT_BRAZILIAN_MINAS_GERAES' ;
-UPDATE Units SET Combat = 75 WHERE UnitType = 'UNIT_BATTLESHIP' ;
+UPDATE Units SET Combat = 65, BaseMoves = 4 WHERE UnitType = 'UNIT_BRAZILIAN_MINAS_GERAES' ;
+UPDATE Units SET Combat = 75, BaseMoves = 4 WHERE UnitType = 'UNIT_BATTLESHIP' ;

@@ -266,4 +266,5 @@ UPDATE Units SET Combat = 60 WHERE UnitType = 'UNIT_SUBMARINE' ;
 UPDATE Units SET Combat = 75 WHERE UnitType = 'UNIT_NUCLEAR_SUBMARINE' ;
 
 -- Naval Bombard units
+UPDATE Units SET Combat = 65 WHERE UnitType = 'UNIT_BRAZILIAN_MINAS_GERAES' ;
 UPDATE Units SET Combat = 75 WHERE UnitType = 'UNIT_BATTLESHIP' ;

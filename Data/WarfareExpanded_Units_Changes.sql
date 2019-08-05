@@ -241,3 +241,12 @@ UPDATE Units SET Bombard = 60, RangedCombat = 0, PrereqTech = 'TECH_ASTRONOMY', 
 												WHERE UnitType = 'UNIT_ENGLISH_SHIP_OF_THE_LINE' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_ENGLISH_SHIP_OF_THE_LINE');
 UPDATE Units SET BaseMoves = 4, Cost = 600, Combat = 82, Bombard = 92, RangedCombat = 0, Maintenance = 7, PromotionClass = 'PROMOTION_CLASS_NAVAL_BOMBARD', PrereqTech = 'TECH_SYNTHETIC_MATERIALS', StrategicResource = null 
 												WHERE UnitType = 'UNIT_JAPANESE_YAMATO' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_JAPANESE_YAMATO');
+
+
+
+-- 2019-08-05 DB's Naval unit balancing
+UPDATE Units SET BaseMove = BaseMoves + 1, Combat = Combat + 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_MELEE' ;
+UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_RAIDER' ;
+UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_RANGED' ;
+UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_BOMBARD' ;
+UPDATE Units SET Range = Range -1 WHERE UnitType = 'UNIT_GALLEON' OR UnitType = 'UNIT_SHIP_OF_THE_LINE';

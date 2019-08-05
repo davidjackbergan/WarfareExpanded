@@ -249,4 +249,4 @@ UPDATE Units SET BaseMove = BaseMoves + 1, Combat = Combat + 5 WHERE Cost > 150 
 UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_RAIDER' ;
 UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_RANGED' ;
 UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_BOMBARD' ;
-UPDATE Units SET Range = Range -1 WHERE UnitType = 'UNIT_GALLEON' OR UnitType = 'UNIT_SHIP_OF_THE_LINE';
+UPDATE Units SET Range = Range - 1 WHERE UnitType = 'UNIT_GALLEON' OR UnitType = 'UNIT_SHIP_OF_THE_LINE';

@@ -322,7 +322,7 @@
 			<Text>Naval Bombard unit: less effective vs sea units</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_NAVAL_BOMBARD_VS_SEA_COMBAT_MODIFIER_DESCRIPTION">
-			<Text>-{1_Amount} less effective vs sea units</Text>
+			<Text>{1_Amount} less effective vs sea units</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_NAVAL_RANGED_VS_SEA_NAME">
 			<Text>Naval Ranged Less Effective vs Sea Units</Text>
@@ -331,7 +331,7 @@
 			<Text>Naval Ranged unit: less effective vs sea units</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_NAVAL_RANGED_VS_SEA_COMBAT_MODIFIER_DESCRIPTION">
-			<Text>-{1_Amount} less effective vs sea units</Text>
+			<Text>{1_Amount} less effective vs sea units</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_NAVAL_RAIDER_VS_LAND_NAME">
 			<Text>Naval Raider Less Effective vs Land Units</Text>
@@ -340,7 +340,7 @@
 			<Text>Naval Raider unit: less effective vs land units</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_NAVAL_RAIDER_VS_LAND_COMBAT_MODIFIER_DESCRIPTION">
-			<Text>-{1_Amount} less effective vs land units</Text>
+			<Text>{1_Amount} less effective vs land units</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_ATTACK_SUBMARINE_NAME">
 			<Text>Attack Submarine</Text>

@@ -261,7 +261,7 @@ UPDATE Units SET Combat = 65, RangedCombat = 100, BaseMoves = 5 WHERE UnitType =
 UPDATE Units SET Combat = 35, BaseMoves = 4 WHERE UnitType = 'UNIT_OTTOMAN_BARBARY_CORSAIR' ;
 UPDATE Units SET Combat = 35, BaseMoves = 4 WHERE UnitType = 'UNIT_PRIVATEER' ;
 UPDATE Units SET Combat = 60, BaseMoves = 5 WHERE UnitType = 'UNIT_GERMAN_UBOAT' ;
-UPDATE Units SET Combat = 60, BaseMoves = 5 WHERE UnitType = 'UNIT_SUBMARINE' ;
+UPDATE Units SET Combat = 60, RangedCombat = 70, BaseMoves = 5 WHERE UnitType = 'UNIT_SUBMARINE' ;
 UPDATE Units SET Combat = 75, BaseMoves = 4 WHERE UnitType = 'UNIT_NUCLEAR_SUBMARINE' ;
 
 -- Naval Bombard units

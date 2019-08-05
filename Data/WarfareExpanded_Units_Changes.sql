@@ -204,6 +204,7 @@ UPDATE UnitUpgrades SET UpgradeUnit = 'UNIT_PRE_DREADNOUGHT' 					WHERE Unit = '
 UPDATE UnitUpgrades SET UpgradeUnit = 'UNIT_AXE_THROWER' 					WHERE Unit = 'UNIT_ZULU_ASSEGAI' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_ZULU_ASSEGAI');
 UPDATE UnitUpgrades SET UpgradeUnit = 'UNIT_COG' 						WHERE Unit = 'UNIT_KHMER_WAR_CANOE' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_KHMER_WAR_CANOE');
 UPDATE UnitUpgrades SET UpgradeUnit = 'UNIT_RAIDER' 						WHERE Unit = 'UNIT_ENGLISH_SEADOG' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_ENGLISH_SEADOG');
+UPDATE UnitUpgrades SET UpgradeUnit = 'UNIT_CORVETTE' 						WHERE Unit = 'UNIT_KOREAN_TURTLE_SHIP' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_KOREAN_TURTLE_SHIP');
 -- GS Compatibility
 UPDATE UnitUpgrades SET UpgradeUnit = 'UNIT_EXPLORER' 						WHERE Unit = 'UNIT_SCYTHIAN_AMAZON_SCOUT' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_SCYTHIAN_AMAZON_SCOUT') AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_EXPLORER');
 UPDATE UnitUpgrades SET UpgradeUnit = 'UNIT_SKIRMISHER' 					WHERE Unit = 'UNIT_SCYTHIAN_AMAZON_SCOUT' AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_SCYTHIAN_AMAZON_SCOUT') AND EXISTS (SELECT 1 FROM Units WHERE UnitType = 'UNIT_SKIRMISHER');
@@ -247,17 +248,17 @@ UPDATE Units SET BaseMoves = 4, Cost = 600, Combat = 82, Bombard = 92, RangedCom
 
 -- Naval Melee units
 UPDATE Units SET Combat = 45, BaseMoves = 4 WHERE UnitType = 'UNIT_CARAVEL' ;
-UPDATE Units SET Combat = 60, BaseMoves = 6 WHERE UnitType = 'UNIT_KOREAN_TURTLE_SHIP' ;
+UPDATE Units SET Combat = 50, BaseMoves = 5 WHERE UnitType = 'UNIT_KOREAN_TURTLE_SHIP' ;
 UPDATE Units SET Combat = 65, BaseMoves = 6 WHERE UnitType = 'UNIT_IRONCLAD' ;
 UPDATE Units SET Combat = 85, BaseMoves = 6 WHERE UnitType = 'UNIT_DESTROYER' ;
 UPDATE Units SET Combat = 85, BaseMoves = 6 WHERE UnitType = 'UNIT_CANADA_HMCS_HAIDA' ;
 
 -- Naval Ranged units
-UPDATE Units SET RangedCombat = 35, BaseMoves = 3 WHERE UnitType = 'UNIT_QUADRIREME' ;
+UPDATE Units SET Combat = 20, RangedCombat = 35, BaseMoves = 3 WHERE UnitType = 'UNIT_QUADRIREME' ;
 UPDATE Units SET Combat = 40, RangedCombat = 60, BaseMoves = 4 WHERE UnitType = 'UNIT_FRIGATE' ;
-UPDATE Units SET Combat = 40, BaseMoves = 5 WHERE UnitType = 'UNIT_INDONESIAN_JONG' ;
-UPDATE Units SET Combat = 45, BaseMoves = 4 WHERE UnitType = 'UNIT_DE_ZEVEN_PROVINCIEN' ;
-UPDATE Units SET Combat = 65, BaseMoves = 5 WHERE UnitType = 'UNIT_MISSILE_CRUISER' ;
+UPDATE Units SET Combat = 40, RangedCombat = 60, BaseMoves = 5 WHERE UnitType = 'UNIT_INDONESIAN_JONG' ;
+UPDATE Units SET Combat = 45, RangedCombat = 65, BaseMoves = 4 WHERE UnitType = 'UNIT_DE_ZEVEN_PROVINCIEN' ;
+UPDATE Units SET Combat = 65, RangedCombat = 85, BaseMoves = 5 WHERE UnitType = 'UNIT_MISSILE_CRUISER' ;
 
 -- Naval Raider units
 UPDATE Units SET Combat = 35, BaseMoves = 4 WHERE UnitType = 'UNIT_OTTOMAN_BARBARY_CORSAIR' ;

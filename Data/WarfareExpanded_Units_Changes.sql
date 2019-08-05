@@ -251,7 +251,7 @@ UPDATE Units SET Combat = 85, BaseMoves = 6 WHERE UnitType = 'UNIT_DESTROYER' ;
 UPDATE Units SET Combat = 85, BaseMoves = 6 WHERE UnitType = 'UNIT_CANADA_HMCS_HAIDA' ;
 
 -- Naval Ranged units
-UPDATE Units SET Combat = 20, RangedCombat = 35, BaseMoves = 3 WHERE UnitType = 'UNIT_QUADRIREME' ;
+UPDATE Units SET Combat = 20, RangedCombat = 40, BaseMoves = 3 WHERE UnitType = 'UNIT_QUADRIREME' ;
 UPDATE Units SET Combat = 40, RangedCombat = 60, BaseMoves = 4 WHERE UnitType = 'UNIT_FRIGATE' ;
 UPDATE Units SET Combat = 40, RangedCombat = 60, BaseMoves = 5 WHERE UnitType = 'UNIT_INDONESIAN_JONG' ;
 UPDATE Units SET Combat = 45, RangedCombat = 65, BaseMoves = 4 WHERE UnitType = 'UNIT_DE_ZEVEN_PROVINCIEN' ;
@@ -267,4 +267,4 @@ UPDATE Units SET Combat = 75, BaseMoves = 4 WHERE UnitType = 'UNIT_NUCLEAR_SUBMA
 -- Naval Bombard units
 UPDATE Units SET Combat = 40, Bombard = 60, BaseMoves = 4 WHERE UnitType = 'UNIT_ENGLISH_SHIP_OF_THE_LINE' ;
 UPDATE Units SET Combat = 65, Bombard = 82, BaseMoves = 4 WHERE UnitType = 'UNIT_BRAZILIAN_MINAS_GERAES' ;
-UPDATE Units SET Combat = 75, Bombard = 90, BaseMoves = 4 WHERE UnitType = 'UNIT_BATTLESHIP' ;
+UPDATE Units SET Combat = 70, Bombard = 90, BaseMoves = 4 WHERE UnitType = 'UNIT_BATTLESHIP' ;

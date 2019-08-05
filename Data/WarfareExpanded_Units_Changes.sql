@@ -245,7 +245,7 @@ UPDATE Units SET BaseMoves = 4, Cost = 600, Combat = 82, Bombard = 92, RangedCom
 
 
 -- 2019-08-05 DB's Naval unit balancing
-UPDATE Units SET BaseMove = BaseMoves + 1, Combat = Combat + 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_MELEE' ;
+UPDATE Units SET BaseMoves = BaseMoves + 1, Combat = Combat + 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_MELEE' ;
 UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_RAIDER' ;
 UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_RANGED' ;
 UPDATE Units SET Combat = Combat - 5 WHERE Cost > 150 AND PromotionClass = 'PROMOTION_CLASS_NAVAL_BOMBARD' ;
